@@ -17,7 +17,21 @@
     0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
     --project-border:  #EEEEEE;
+    --hero-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --hero-button-active: #188CE8;
+
 }
+
+/* Подключается через modern-normalize.min.css */
+/* html {
+    box-sizing: border-box;
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+} */
 
 body{
     font-family: "Roboto", sans-serif ;
@@ -25,13 +39,22 @@ body{
     letter-spacing: 0.03em;
     background-color: var(--page-background);
     color: var(--priority-text-color);
+    width: 1600px;
+        outline: 1px solid tomato;
 }
 
-/* .page-header {
+.page-header {
     width: 1600px;
-    height: 56px;
-    border: 1px solid #ECECEC; 
-} */
+
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    outline: 1px solid tomato;
+
+}
+
 
 /* Ссылка-Логотип  */
 .logo {
@@ -40,6 +63,8 @@ body{
     font-size: 26px;
     line-height: 1.22;
     color: var(--accent-color);
+    display: inline-block;
+    
 }
 
 /* Текст Studio */
@@ -54,7 +79,7 @@ body{
 .list,
 .buttons.list,
 .projects.list {
-    list-style: none;   
+    list-style: none;
 }
 
 /* Меню навигации */
@@ -82,26 +107,38 @@ body{
 .nav-contacts {
     color: var(--priority-text-color);
 }
-
+/* Сброс верхних отступов в заголовках, тексте и списках */
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
 /* Секция Герой */
 .hero {
     background-color: var(--hero-footer-background);
+    text-align: center;
+    outline: 1px solid tomato;
 }
 
 .hero-title {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero);
+
 }
 
 /* Кнопка */
 .hero-button {
-    width: 216px;
-    height: 50px;
+    min-width: 216px;
+    display: inline-block;
+    padding: 10px 32px ;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -110,16 +147,24 @@ body{
     border-radius: 4px;
     background-color: var(--accent-color);
     border: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
+    box-shadow: var(--hero-box-shadow);
 }
-
+.hero-button:active {
+    background: var(--hero-button-active);
+}
+/* Секции */
+.section {
+padding-top: 94px;
+padding-bottom: 94px;
+outline: 1px solid teal;
+}
 /* Заголовки секций h2 */
 .section-title {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     color: var(--title-text-color);
+    margin-bottom: 50px;
 }
 
 /* Скрытие заголовка */
@@ -136,8 +181,13 @@ body{
     margin: -1px;
 }
 
+/* Особливості  сброс нижнего паддинга*/
+.no-padding {
+    padding: 0;
+}
 /* Заголовки h3 Секции "Особенности"*/
 .peculiarities-subtitle {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -196,6 +246,7 @@ body{
 /* Страница Портфолио */
 /* Кнопки */
 .portfolio-button {
+    display: inline-block;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -206,6 +257,8 @@ body{
     background: var(--team-background);
     border-radius: 4px;
     border: 0;
+    padding: 6px 22px;
+
 }
   /* Активная кнопка */
 .portfolio-button.active,
@@ -213,6 +266,7 @@ body{
 portfolio-button:focus {
     color: var(--logo-footer);
     background: var(--accent-color);
+    box-shadow: var(--portfolio-box-shadow);
 }
 
 /* Заголовки h2 Проектов */
@@ -221,6 +275,7 @@ portfolio-button:focus {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
+    margin-bottom: 4px;
 }
 
 .projects-text {
