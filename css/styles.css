@@ -43,6 +43,17 @@ body{
         outline: 1px solid tomato;
 }
 
+/* Утилиты */
+/* Сброс верхних отступов в заголовках, тексте и списках */
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .page-header {
     width: 1600px;
 
@@ -53,6 +64,25 @@ body{
     padding: 0 15px;
     outline: 1px solid tomato;
 
+}
+/* Для расположения меню по центру */
+.flex-container,
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Для ссылок падинги */
+.link,
+.nav-contacts {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/* Отступ от логотипа */
+.site-nav {
+    margin-left: 93px;
 }
 
 
@@ -91,6 +121,15 @@ body{
     color: var(--title-text-color);
 }
 
+/* Отступы в новигации */
+/* .site-nav .item:not(:last-child) {
+margin-right: 50px;
+} */
+.site-nav .item+.item,
+.flex .item + .item {
+    margin-left: 50px;
+}
+
 /* Ссылки в навигации */
 .logo,
 .accent {
@@ -107,14 +146,9 @@ body{
 .nav-contacts {
     color: var(--priority-text-color);
 }
-/* Сброс верхних отступов в заголовках, тексте и списках */
-h1,
-h2,
-h3,
-p,
-ul {
-    margin: 0;
-    padding: 0;
+/* Выравнивание у левому краю */
+.contacts {
+    margin-left: auto;
 }
 /* Секция Герой */
 .hero {
@@ -268,7 +302,11 @@ portfolio-button:focus {
     background: var(--accent-color);
     box-shadow: var(--portfolio-box-shadow);
 }
-
+/* flex-container */
+.flex-container{
+    /* display: flex; */
+    flex-wrap: wrap;
+}
 /* Заголовки h2 Проектов */
 .projects-title {
     font-size: 18px;

@@ -14,24 +14,26 @@
 <body>
     <header class="page-header">
         <!-- шапка меню-->
-        <div class="container">
-            <nav>
-                <a class="logo" href="./index.html" lang="en">Web<span class="logo-header">Studio</span></a>
-                <ul class="site-nav list">
-                    <li><a class="link accent active" href="./index.html">Студія</a></li>
-                    <li><a class="link  accent" href="./portfolio.html">Портфоліо</a></li>
-                    <li><a class="link  accent" href="#">Контакти</a></li>
+        <div class="container flex">
+            <!-- <div class="flex-container"> -->
+                <nav class="flex">
+                    <a class="logo" href="./index.html" lang="en">Web<span class="logo-header">Studio</span></a>
+                    <ul class="site-nav list flex">
+                        <li class="item"><a class="link accent active" href="./index.html">Студія</a></li>
+                        <li class="item"><a class="link  accent" href="./portfolio.html">Портфоліо</a></li>
+                        <li class="item"><a class="link  accent" href="#">Контакти</a></li>
+                    </ul>
+                </nav>
+                <!-- Контакты -->
+                <ul class="contacts list flex">
+                    <li class="item">
+                        <a class="nav-contacts  accent" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-contacts  accent" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
                 </ul>
-            </nav>
-            <!-- Контакты -->
-            <ul class="list">
-                <li>
-                    <a class="nav-contacts  accent" href="tel:+380961111111">+38 096 111 11 11</a>
-                </li>
-                <li>
-                    <a class="nav-contacts  accent" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                </li>
-            </ul>
+            <!-- </div> -->
         </div>
     </header>
     <main>
