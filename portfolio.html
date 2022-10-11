@@ -14,30 +14,32 @@
 <body>
     <header class="page-header">
         <!-- шапка меню-->
-        <nav>
-            <a class="logo" href="./index.html" lang="en">Web<span class="logo-header">Studio</span></a>
-            <ul class="site-nav list">
-                <li><a class="link accent " href="./index.html">Студія</a></li>
-                <li><a class="link  accent active" href="./portfolio.html">Портфоліо</a></li>
-                <li><a class="link  accent" href="#">Контакти</a></li>
-            </ul>
-        </nav>
-        <!-- Контакты -->
-        <ul class="list">
-            <li>
-                <a class="nav-contacts  accent" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-            <li>
-                <a class="nav-contacts  accent" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-        </ul>
+        <div class="container flex">
+                <nav class="flex">
+                    <a class="logo" href="./index.html" lang="en">Web<span class="logo-header">Studio</span></a>
+                    <ul class="site-nav list flex">
+                        <li class="item"><a class="link accent " href="./index.html">Студія</a></li>
+                        <li class="item"><a class="link  accent active" href="./portfolio.html">Портфоліо</a></li>
+                        <li class="item"><a class="link  accent" href="#">Контакти</a></li>
+                    </ul>
+                </nav>
+                <!-- Контакты -->
+                <ul class="contacts list flex">
+                    <li class="item">
+                        <a class="nav-contacts  accent" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="item">
+                        <a class="nav-contacts  accent" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+        </div>
     </header>
     <main>
         <section class="section">
             <div class="container">
                 <h1 class="hero-title visually-hidden ">Наші Проєкти</h1>
                 <!--Меню filters -->
-                <ul class="buttons list">
+                <ul class="buttons list flex">
                     <li>
                         <button class="portfolio-button active" type="button">Усі</button>
                     </li>
@@ -55,8 +57,8 @@
                     </li>
                 </ul>
                 <!-- Список проектов -->
-                <div class="flex-container">
-                    <ul class="projects list">
+                <!-- <div class="flex-container"> -->
+                    <ul class="projects list flex-container">
                         <li class="project">
                             <img src="./images/portfolio/technocrack-website.jpg" alt="Приклад веб-сайту Технокряк" width="370" height="294">
                             <h2 class="projects-title">Технокряк</h2>
@@ -103,7 +105,7 @@
                             <p class="projects-text">Додаток</p>
                         </li>
                     </ul>
-                </div>
+                <!-- </div> -->
             </div>
             
         </section>

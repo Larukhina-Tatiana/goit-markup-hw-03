@@ -7,16 +7,16 @@
     --page-background: #FFFFFF;
     --logo-header: #000000;
     --logo-footer: #FFFFFF;
-    --hero:  #FFFFFF;
+    --hero: #FFFFFF;
     --team-background: #F5F4FA;
     --address-color: rgba(255, 255, 255, 0.6);
     --team-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     --portfolio-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-    --project-border:  #EEEEEE;
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    --project-border: #EEEEEE;
     --hero-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     --hero-button-active: #188CE8;
 
@@ -33,14 +33,14 @@
     box-sizing: inherit;
 } */
 
-body{
-    font-family: "Roboto", sans-serif ;
+body {
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
     background-color: var(--page-background);
     color: var(--priority-text-color);
     width: 1600px;
-        outline: 1px solid tomato;
+    outline: 1px solid tomato;
 }
 
 /* Утилиты */
@@ -56,8 +56,10 @@ ul {
 
 .page-header {
     width: 1600px;
+    border-bottom: 1px solid var(--borders-color);
 
 }
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -65,6 +67,7 @@ ul {
     outline: 1px solid tomato;
 
 }
+
 /* Для расположения меню по центру */
 .flex-container,
 .flex {
@@ -94,13 +97,14 @@ ul {
     line-height: 1.22;
     color: var(--accent-color);
     display: inline-block;
-    
+
 }
 
 /* Текст Studio */
 .logo-header {
     color: var(--logo-header);
 }
+
 .logo-footer {
     color: var(--logo-footer);
 }
@@ -126,7 +130,7 @@ ul {
 margin-right: 50px;
 } */
 .site-nav .item+.item,
-.flex .item + .item {
+.flex .item+.item {
     margin-left: 50px;
 }
 
@@ -146,10 +150,12 @@ margin-right: 50px;
 .nav-contacts {
     color: var(--priority-text-color);
 }
+
 /* Выравнивание у левому краю */
 .contacts {
     margin-left: auto;
 }
+
 /* Секция Герой */
 .hero {
     background-color: var(--hero-footer-background);
@@ -172,7 +178,7 @@ margin-right: 50px;
 .hero-button {
     min-width: 216px;
     display: inline-block;
-    padding: 10px 32px ;
+    padding: 10px 32px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -183,15 +189,18 @@ margin-right: 50px;
     border: 0;
     box-shadow: var(--hero-box-shadow);
 }
+
 .hero-button:active {
     background: var(--hero-button-active);
 }
+
 /* Секции */
 .section {
-padding-top: 94px;
-padding-bottom: 94px;
-outline: 1px solid teal;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    outline: 1px solid teal;
 }
+
 /* Заголовки секций h2 */
 .section-title {
     font-size: 36px;
@@ -219,6 +228,7 @@ outline: 1px solid teal;
 .no-padding {
     padding: 0;
 }
+
 /* Заголовки h3 Секции "Особенности"*/
 .peculiarities-subtitle {
     margin-bottom: 10px;
@@ -226,7 +236,7 @@ outline: 1px solid teal;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
-} 
+}
 
 /* текст Секции "Особенности" */
 .peculiarities-text {
@@ -294,7 +304,8 @@ outline: 1px solid teal;
     padding: 6px 22px;
 
 }
-  /* Активная кнопка */
+
+/* Активная кнопка */
 .portfolio-button.active,
 .portfolio-button:hover,
 portfolio-button:focus {
@@ -302,11 +313,13 @@ portfolio-button:focus {
     background: var(--accent-color);
     box-shadow: var(--portfolio-box-shadow);
 }
+
 /* flex-container */
-.flex-container{
-    /* display: flex; */
+.flex-container {
     flex-wrap: wrap;
+   
 }
+
 /* Заголовки h2 Проектов */
 .projects-title {
     font-size: 18px;
@@ -317,12 +330,26 @@ portfolio-button:focus {
 }
 
 .projects-text {
-font-size: 16px;
-line-height: 1.87;
+    font-size: 16px;
+    line-height: 1.87;
 }
+
 .project {
-    width: 370px;
-    height: 404px;
-background:var(--page-background);
-border: 1px solid var(--project-border);
+    /* /* width: 370px; */
+    width: calc((100% - 60px)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: var(--page-background);
+    /* border: 1px solid var(--project-border); */
 }
+
+/* Каждый третий */ 
+.project:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Последние 3 элемента */
+.project:nth-last-child(-n+3) {
+    margin-bottom: 0;
+} 
+
