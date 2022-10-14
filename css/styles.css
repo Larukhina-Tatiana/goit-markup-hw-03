@@ -39,8 +39,6 @@ body {
     letter-spacing: 0.03em;
     background-color: var(--page-background);
     color: var(--priority-text-color);
-    /* width: 1600px; */
-    outline: 1px solid tomato;
 }
 
 /* Утилиты */
@@ -63,8 +61,6 @@ ul {
     width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    outline: 1px solid tomato;
-
 }
 
 /* Для расположения меню по центру */
@@ -128,8 +124,8 @@ ul {
 /* .site-nav .item:not(:last-child) {
 margin-right: 50px;
 } */
-.site-nav .item+.item,
-.flex .item+.item {
+.site-nav >.item+.item,
+.flex >.item+.item {
     margin-left: 50px;
 }
 
@@ -157,10 +153,8 @@ margin-right: 50px;
 
 /* Секция Герой */
 .hero {
-    width: 1600px;
     background-color: var(--hero-footer-background);
     text-align: center;
-    outline: 1px solid tomato;
 }
 
 .hero-title {
@@ -201,7 +195,6 @@ margin-right: 50px;
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-    outline: 1px solid teal;
 }
 
 /* Заголовки секций h2 */
@@ -252,7 +245,8 @@ margin-right: 50px;
 
 
 /* Секция Чим ми займаемося */
-.alignment {
+.alignment,
+.team-list {
     justify-content: space-between;
 }
 /* Секция Наша команда */
@@ -262,13 +256,14 @@ margin-right: 50px;
 
 .team-card {
     width: 270px;
-    height: 368px;
+    /* height: 368px; */
     background: var(--page-background);
     box-shadow: var(--team-box-shadow);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-subtitle {
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -278,6 +273,7 @@ margin-right: 50px;
 }
 
 .team-text {
+    margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -285,13 +281,23 @@ margin-right: 50px;
 
 /* Объединение для выравнивания */
 .content {
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 /* Футер */
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background: var(--hero-footer-background);
 }
+.address {
+    margin-top: 20px;
+}
 
+.address-indent {
+    margin-top: 9px;
+}
 .address-link,
 .footer-contacts {
     font-style: normal;
