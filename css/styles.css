@@ -155,6 +155,8 @@ margin-right: 50px;
 .hero {
     background-color: var(--hero-footer-background);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -185,6 +187,7 @@ margin-right: 50px;
     background-color: var(--accent-color);
     border: 0;
     box-shadow: var(--hero-box-shadow);
+    cursor: pointer;
 }
 
 .hero-button:active {
@@ -245,6 +248,10 @@ margin-right: 50px;
 
 
 /* Секция Чим ми займаемося */
+/* Снятие пробела у фото */
+.img-block {
+    display: block;
+}
 .alignment,
 .team-list {
     justify-content: space-between;
@@ -262,8 +269,11 @@ margin-right: 50px;
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-subtitle {
+.caption {
     margin-top: 30px;
+    margin-bottom: 16px;
+}
+.team-subtitle {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -273,7 +283,6 @@ margin-right: 50px;
 }
 
 .team-text {
-    margin-bottom: 30px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -342,6 +351,7 @@ margin-right: 50px;
 .portfolio-button.active,
 .portfolio-button:hover,
 portfolio-button:focus {
+    padding: 6px 25px;
     color: var(--logo-footer);
     background: var(--accent-color);
     box-shadow: var(--portfolio-box-shadow);
@@ -354,6 +364,15 @@ portfolio-button:focus {
    
 }
 
+.project-caption {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+
+   
+    
+}
 /* Заголовки h2 Проектов */
 .projects-title {
     font-size: 18px;
