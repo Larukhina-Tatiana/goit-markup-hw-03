@@ -366,9 +366,9 @@ portfolio-button:focus {
 
 .project-caption {
     padding: 20px 24px;
-    border-right: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid var(--project-border);
+    border-left: 1px solid var(--project-border);
+    border-bottom: 1px solid var(--project-border);
 
    
     
